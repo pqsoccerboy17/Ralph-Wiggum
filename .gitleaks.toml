@@ -1,0 +1,16 @@
+title = "Gitleaks config"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Allowlist for documentation patterns"
+paths = [
+  '''\.md$''',
+]
+regexes = [
+  # Allow example/placeholder secrets in documentation
+  '''example\.com''',
+  '''your[_-]?api[_-]?key''',
+  '''your[_-]?secret''',
+]
